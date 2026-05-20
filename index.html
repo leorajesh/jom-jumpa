@@ -132,6 +132,76 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
+        .contact-form {
+            margin-bottom: 30px;
+            padding: 24px;
+            background: #f8f9ff;
+            border-radius: 18px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .form-label {
+            font-size: 14px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .form-fields {
+            display: grid;
+            gap: 14px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #dde2ef;
+            border-radius: 14px;
+            background: #fff;
+            font-size: 15px;
+            color: #333;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-button {
+            width: 100%;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 8px;
+        }
+
+        .form-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 30px rgba(118, 75, 162, 0.2);
+        }
+
+        .form-note {
+            font-size: 13px;
+            color: #777;
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
         .footer {
             padding: 20px 30px;
             background: #f8f9fa;
@@ -197,6 +267,19 @@
                 </div>
             </div>
 
+            <div class="contact-form">
+                <div class="form-label">Send a message</div>
+                <form id="contactForm">
+                    <div class="form-fields">
+                        <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                        <input type="email" name="email" class="form-input" placeholder="Your email" required>
+                        <textarea name="message" class="form-textarea" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="form-button">Email me</button>
+                    <div class="form-note">This is a static page form. Submitting opens your email client with your message ready to send.</div>
+                </form>
+            </div>
+
             <div class="divider"></div>
 
             <div class="qr-section">
@@ -209,5 +292,25 @@
             Digital Contact Card • May 2026
         </div>
     </div>
+    <script>
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(contactForm);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const message = formData.get('message').trim();
+
+            const subject = encodeURIComponent('Contact from website');
+            const body = encodeURIComponent(`Name: ${name}
+Email: ${email}
+
+${message}`);
+            const mailto = `mailto:leorajeshkumars@gmail.com?subject=${subject}&body=${body}`;
+
+            window.location.href = mailto;
+        });
+    </script>
 </body>
 </html>
