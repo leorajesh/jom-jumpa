@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Rajesh Kumar - Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px 30px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-info {
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            color: #999;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            color: #333;
+            word-break: break-word;
+        }
+
+        .contact-value a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-value a:hover {
+            color: #764ba2;
+        }
+
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
+        }
+
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-label {
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .upload-area {
+            border: 2px dashed #667eea;
+            border-radius: 12px;
+            padding: 30px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f8f9ff;
+        }
+
+        .upload-area:hover {
+            border-color: #764ba2;
+            background: #f0f2ff;
+        }
+
+        .upload-area.has-image {
+            border-color: #ccc;
+            background: white;
+        }
+
+        .upload-text {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .upload-hint {
+            color: #999;
+            font-size: 12px;
+        }
+
+        #qrPreview {
+            display: none;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        #qrPreview.show {
+            display: block;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 20px 20px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .contact-item {
+                margin-bottom: 20px;
+            }
+
+            .upload-area {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">Leo Rajesh Kumar</div>
+            <div class="title">Professional Contact Card</div>
+        </div>
+
+        <div class="content">
+            <!-- Email -->
+            <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div class="contact-info">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:leorajeshkumars@gmail.com">leorajeshkumars@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-info">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">
+                        <a href="tel:+6588089234">+6588089234</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+                <div class="contact-icon">🔗</div>
+                <div class="contact-info">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">
+                        <a href="https://sg.linkedin.com/in/leorajeshkumar" target="_blank">linkedin.com/in/leorajeshkumar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- QR Code Upload -->
+            <div class="qr-section">
+                <label class="qr-label">LinkedIn QR Code</label>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-text">📷 Click or drag to upload</div>
+                    <div class="upload-hint">PNG, JPG, or any image format</div>
+                </div>
+                <img id="qrPreview" alt="QR Code Preview">
+                <input type="file" id="fileInput" accept="image/*">
+            </div>
+        </div>
+
+        <div class="footer">
+            Digital Contact Card • May 2026
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const qrPreview = document.getElementById('qrPreview');
+
+        // Click to upload
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadArea.style.borderColor = '#764ba2';
+            uploadArea.style.background = '#f0f2ff';
+        });
+
+        uploadArea.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadArea.style.borderColor = '#667eea';
+            uploadArea.style.background = '#f8f9ff';
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        // File input change
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('Please select an image file');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                qrPreview.src = e.target.result;
+                qrPreview.classList.add('show');
+                uploadArea.classList.add('has-image');
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>
